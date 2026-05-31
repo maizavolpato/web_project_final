@@ -1,0 +1,17 @@
+.page {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  background-color: #fef9f0;
+}
+
+.page__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}

@@ -1,0 +1,56 @@
+.list-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 12px;
+}
+
+.list-buttons__all-category {
+  width: 120px;
+  height: 84px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #2c5936;
+  border: 1px solid #c0ea78;
+  background-color: #d6f3a5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.list-buttons__category {
+  width: 120px;
+  height: 84px;
+  padding: 12px 20px;
+  color: #2c5936;
+  border: 1px solid #f8d493;
+  border-radius: 12px;
+  background: #fef9f0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.list-buttons__all-category:hover {
+  background: #c0ea78;
+}
+
+.list-buttons__category:hover {
+  background: #f8d493;
+}
+
+@media screen and (max-width: 544px) {
+  .list-buttons {
+    justify-content: center;
+    padding: 0 12px;
+  }
+
+  .list-buttons__all-category,
+  .list-buttons__category {
+    width: 68px;
+    height: 40px;
+    font-size: 8px;
+    padding: 0;
+  }
+}

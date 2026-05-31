@@ -1,0 +1,9 @@
+@import url("../src/components//page.css");
+@import url("../src/components/header/header.css");
+@import url("../src/components/main/main/list-buttons.css");
+@import url("../src/components/main/product/products.css");
+@import url("../src/components/main/imagePopup/imagepopup.css");
+@import url("../src/components/footer/footer.css");
+@import url("./components/pages/about/about.css");
+@import url("./components/main/favoritesModal/favoritesModal.css");
+@import url("./components/main/weather/weather.css");

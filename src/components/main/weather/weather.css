@@ -1,0 +1,24 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2c5936;
+}
+
+.weather__city {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.weather__temp {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.weather__description {
+  margin: 0;
+  font-size: 12px;
+  text-transform: capitalize;
+}
