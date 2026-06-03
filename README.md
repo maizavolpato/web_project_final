@@ -1,15 +1,57 @@
 E-Commerce Frontend Project
 
-This project is a fully responsive e-commerce frontend application built with React and JavaScript. It was developed as a hands-on learning experience focused on building real-world UI/UX features, API integration, and modern frontend architecture. The application simulates an online shopping platform where users can browse products, interact with modals, add items to favorites, and view promotional content.
+A fully responsive e-commerce frontend application built with React and JavaScript, developed to simulate a modern online shopping experience with dynamic UI interactions, responsive layouts, and API integrations.
 
-The interface was designed with responsiveness in mind. Flexbox and CSS Grid were used extensively to create a structured and adaptive layout, while Google Fonts were integrated to enhance the visual identity and typography consistency.
+Overview
 
-One of the core features of the project is the favorites system, where users can like products and manage them inside a dedicated modal. Items can also be removed directly from the favorites window, providing a more dynamic and interactive experience. Promotional modals were implemented to simulate real-world e-commerce marketing behavior, appearing as overlay windows to highlight offers or messages.
+This project was created as a hands-on frontend development experience focused on building reusable components, managing application state, integrating external services, and improving user experience through interactive features.
+The application simulates a real e-commerce platform where users can browse products, interact with promotional content, manage favorite items, and navigate through a responsive interface optimized for multiple screen sizes.
 
-The project also includes an About page that describes the fictional company behind the store, helping to simulate a more complete commercial structure rather than just a product listing interface.
+Main Features
 
-On the technical side, Firebase was integrated to handle image storage and upload functionality, allowing products to be dynamically associated with media hosted in the cloud.
+Responsive e-commerce interface
+Product favorites system
+Dynamic add/remove favorite functionality
+Responsive sidebar modal
+Promotional overlay modals
+Firebase cloud image hosting
+External Weather API integration
+Responsive layouts using Flexbox and CSS Grid
+Reusable React component structure
 
-Additionally, an external weather API was integrated using vanilla JavaScript and the fetch method.
+Technologies Used
 
-The project makes use of both React and vanilla JavaScript techniques. React is responsible for managing the UI state and rendering components, while vanilla JavaScript is used in specific modules for direct API handling and data processing.
+React
+JavaScript (ES6+)
+CSS3
+Flexbox
+CSS Grid
+Firebase
+REST API Integration
+Fetch API
+
+Frontend Concepts Practiced
+
+State management with React Hooks
+Component communication with props
+Conditional rendering
+Event handling
+Responsive UI development
+Modal systems
+Dynamic rendering
+API consumption
+Component reusability
+Frontend architecture organization
+
+Project Goal
+
+The main goal of this project was to strengthen practical frontend development skills by recreating common features found in modern e-commerce applications while following a clean and scalable component structure.
+
+Next Steps
+
+User authentication
+Protected routes
+Backend integration
+Shopping cart persistence
+Database integration
+Full-stack architecture expansion
