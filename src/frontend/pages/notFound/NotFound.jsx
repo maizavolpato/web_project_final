@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Header from "../../header/Header";
+import Header from "../../main/header/Header.jsx";
 
 function NotFound() {
   return (
@@ -8,7 +8,7 @@ function NotFound() {
         <div className="header__menu">
           <Link to="/">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/logo.png?alt=media&token=ad64daf8-0fef-4c29-91a2-80a2d08436a9"
+              src="images/logo/logo.png"
               alt="Logo Verde Vivo"
               className="header__logo"
             />

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase.js";
-import Product from "../product/Product.jsx";
-import ImagePopup from "../imagePopup/imagePopup.jsx";
+import Product from "../../../frontend/main/product/Product.jsx";
+import ImagePopup from "../../../frontend/main/imagePopup/imagePopup.jsx";
 
 export default function ProductList({
   selectedCategory,

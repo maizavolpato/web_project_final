@@ -13,7 +13,7 @@ export default function About() {
         <div className="header__menu">
           <Link to="/">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/logo.png?alt=media&token=ad64daf8-0fef-4c29-91a2-80a2d08436a9"
+              src="/images/logo/logo.png"
               alt="Logo Verde Vivo"
               className="header__logo"
             />
@@ -46,7 +46,7 @@ export default function About() {
           <div className="header__container-user">
             <div className="header__container-user_block">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/user_icon.png?alt=media&token=88e578c9-45f8-4c2e-a4e1-5b57fb460c9b"
+                src="/images/icons/user_icon.png"
                 alt="User Ícone"
                 className="header__container-user_icone-user"
               />
@@ -67,7 +67,7 @@ export default function About() {
             }}
           >
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/favorites.png?alt=media&token=0cb9e665-1fd0-4689-908f-2e0a9b6a8907"
+              src="/images/icons/favorites.png"
               className="header__container-user_icone-favorites"
               alt="Coração Favoritos"
             />
@@ -75,7 +75,7 @@ export default function About() {
           </a>
           <Link to="/cart" className="header__container-user_cart">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/cart_icon.png?alt=media&token=bd664f00-771d-4882-acbe-14e0b83bdeab"
+              src="/images/icons/cart_icon.png"
               alt="Cart Ícone"
               className="header__container-user_icone-cart"
             />
@@ -112,7 +112,7 @@ export default function About() {
           Acreditamos em um futuro onde sabor, saúde e respeito caminham juntos.
         </div>
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/group_picture.png?alt=media&token=6f3fdef9-e420-4c65-9f98-c7a376d5d546"
+          src="/images/banners/group_picture.png"
           alt="Foto do Grupo Verde Vivo"
           className="about__image"
         />
@@ -137,17 +137,17 @@ export default function About() {
 
             <div className="header__promo-modal__content">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/desc_geleias.png?alt=media&token=7c1c79df-0c65-4d71-a4b6-ea0d3e8778c7"
+                src="/images/banners/desc_geleias.png"
                 alt="Desconto Geléias"
                 className="header__promo-modal__image"
               />
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/desc_pizzas.png?alt=media&token=e1dc1d54-a40a-48b8-a5b3-888c0bbaac96"
+                src="/images/banners/desc_pizzas.png"
                 alt="Desconto Pizzas"
                 className="header__promo-modal__image"
               />
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/desc_queijos.png?alt=media&token=96bf7486-f2ee-416d-ae99-f2579072f3b5"
+                src="/images/banners/desc_queijos.png"
                 alt="Desconto Queijos"
                 className="header__promo-modal__image"
               />

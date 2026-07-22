@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer__text-box">
           <div className="footer__logo_content">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/logo_white.png?alt=media&token=ea3f498c-f206-4dee-89b1-00bec8d2238a"
+              src="images/logo/logo_white.png"
               alt="Logo branco"
               className="footer__logo-branco"
             />

@@ -27,9 +27,7 @@
 .popup__close {
   width: 34px;
   height: 34px;
-  background: transparent
-    url("https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/close_button.png?alt=media&token=5a97c858-3e77-44b4-83b0-ca2dc1b9e003")
-    center no-repeat;
+  background: transparent url("/images/icons/close_button.png") center no-repeat;
   border: none;
   position: absolute;
   top: -36px;

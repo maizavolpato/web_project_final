@@ -100,9 +100,7 @@
 .product__like-button {
   appearance: none;
   -webkit-appearance: none;
-  background: transparent
-    url("https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/like_button.png?alt=media&token=9729a43e-5065-4fea-9cd3-89e2df382400")
-    center no-repeat;
+  background: transparent url("/images/icons/like_button.png") center no-repeat;
   width: 21px;
   height: 19px;
   border: none;
@@ -121,9 +119,8 @@
 
 .product__like-button-active {
   opacity: 1;
-  background: transparent
-    url("https://firebasestorage.googleapis.com/v0/b/web-project-final-35d11.firebasestorage.app/o/like_button_active.png?alt=media&token=d3b25282-900d-47c4-b02b-fa190799e578")
-    center no-repeat;
+  background: transparent url("/images/icons/like_button_active.png") center
+    no-repeat;
 }
 
 @media screen and (max-width: 544px) {

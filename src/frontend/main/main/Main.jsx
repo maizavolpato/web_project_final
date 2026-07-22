@@ -73,7 +73,7 @@ export default function Main() {
       </section>
       <div className="products__box">
         <img
-          src="../../images/products_icon.png"
+          src="/images/icons/products_icon.png"
           alt="Products icon"
           className="products__box-icon"
         />
