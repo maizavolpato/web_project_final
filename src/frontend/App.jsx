@@ -6,15 +6,20 @@ import About from "../frontend/pages/about/About.jsx";
 import NotFound from "../frontend/pages/notFound/NotFound.jsx";
 import Login from "./pages/login/Login.jsx";
 import Register from "./pages/register/Register.jsx";
+import CostumerArea from "./pages/custumerArea/CustumerArea.jsx";
 
 function App() {
   const location = useLocation();
 
-  const hideHeader =
-    location.pathname === "/login" ||
-    location.pathname === "/signup" ||
-    location.pathname === "/cart" ||
-    location.pathname === "/about";
+  const hiddenRoutes = [
+    "/login",
+    "/signup",
+    "/cart",
+    "/about",
+    "/costumerarea",
+  ];
+
+  const hideHeader = hiddenRoutes.includes(location.pathname);
 
   return (
     <div className="page">
@@ -26,6 +31,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/cart" element={<NotFound />} />
+          <Route path="/costumerarea" element={<CostumerArea />} />
         </Routes>
         <Footer />
       </div>

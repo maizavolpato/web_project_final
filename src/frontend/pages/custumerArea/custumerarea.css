@@ -1,0 +1,114 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dashboard__menu {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard__logo {
+  width: 140px;
+  height: 80px;
+}
+
+.dashboard__nav {
+  display: flex;
+}
+
+.dashboard__nav-links {
+  width: 520px;
+  margin: 8px 0 0;
+  display: flex;
+  column-gap: 18px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard__nav-link {
+  font-size: 16px;
+  color: #2c5936;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dashboard__input {
+  width: 280px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #aca9a3;
+}
+
+.dashboard__nav-links-user {
+  display: flex;
+  gap: 18px;
+  margin: 8px 0 0;
+}
+
+.header__container-user_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #2c5936;
+  font-weight: bold;
+}
+
+.dashboard__image-favorites,
+.dashboard__image-cart {
+  width: 28px;
+  height: 28px;
+}
+
+.costumer-area {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.costumer-area__banner {
+  width: 100%;
+  height: 500px;
+}
+
+.costumer-area__box-title__image {
+  width: 34px;
+  height: 34px;
+  margin-left: 14px;
+}
+
+.costumer-are__box-title {
+  color: #2c5936;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 28px 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.costumer-area__cupons-image {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+
+.costumer-area__cupon-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.costumer-area__image-desc {
+  width: 264px;
+  height: 84px;
+  border-radius: 12px;
+}
