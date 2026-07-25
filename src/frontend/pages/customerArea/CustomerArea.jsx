@@ -12,10 +12,10 @@ export default function CostumerArea() {
           />
           <nav className="dashboard__nav">
             <div className="dashboard__nav-links">
-              <Link to="/shopping" className="dashboard__nav-link">
+              <Link to="custumerarea/shopping" className="dashboard__nav-link">
                 Compras efetuadas
               </Link>
-              <Link to="/return" className="dashboard__nav-link">
+              <Link to="custumerarea/return" className="dashboard__nav-link">
                 Devoluções
               </Link>
             </div>
@@ -31,7 +31,7 @@ export default function CostumerArea() {
                 />
                 Favoritos
               </Link>
-              <Link to="/costumerarea/cart" className="dashboard__nav-link">
+              <Link to="/custumerarea/cart" className="dashboard__nav-link">
                 <img
                   src="/images/icons/cart_icon.png"
                   className="dashboard__image-cart"
