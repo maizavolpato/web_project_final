@@ -8,7 +8,7 @@ function NotFound() {
         <div className="header__menu">
           <Link to="/">
             <img
-              src="images/logo/logo.png"
+              src="/images/logo/logo.png"
               alt="Logo Verde Vivo"
               className="header__logo"
             />

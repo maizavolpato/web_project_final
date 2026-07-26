@@ -18,6 +18,8 @@ function App() {
     "/signup",
     "/about",
     "/customerarea",
+    "/customerarea/shopping",
+    "/customerarea/return",
     "/customerarea/cart",
   ];
 
@@ -32,12 +34,27 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
-          <Route path="/cart" element={<NotFound />} />
           <Route
             path="/customerarea"
             element={
               <PrivateRoute>
                 <CustomerArea />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/customerarea/shopping"
+            element={
+              <PrivateRoute>
+                <NotFound />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/customerarea/return"
+            element={
+              <PrivateRoute>
+                <NotFound />
               </PrivateRoute>
             }
           />
@@ -49,6 +66,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>

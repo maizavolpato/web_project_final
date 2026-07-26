@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Main from "../../main/main/Main";
 
 export default function CostumerArea() {
   return (
@@ -12,16 +13,16 @@ export default function CostumerArea() {
           />
           <nav className="dashboard__nav">
             <div className="dashboard__nav-links">
-              <Link to="custumerarea/shopping" className="dashboard__nav-link">
+              <Link to="/customerarea/shopping" className="dashboard__nav-link">
                 Compras efetuadas
               </Link>
-              <Link to="custumerarea/return" className="dashboard__nav-link">
+              <Link to="/customerarea/return" className="dashboard__nav-link">
                 Devoluções
               </Link>
             </div>
             <div className="dashboard__nav-links-user">
               <Link
-                to="/costumerarea/favorites"
+                to="/customerarea/favorites"
                 className="dashboard__nav-link"
               >
                 <img
@@ -31,7 +32,7 @@ export default function CostumerArea() {
                 />
                 Favoritos
               </Link>
-              <Link to="/custumerarea/cart" className="dashboard__nav-link">
+              <Link to="/customerarea/cart" className="dashboard__nav-link">
                 <img
                   src="/images/icons/cart_icon.png"
                   className="dashboard__image-cart"
@@ -50,44 +51,45 @@ export default function CostumerArea() {
       </div>
       <div className="costumer-area">
         <img
-          src="/images/banners/banner_costumerarea.png"
-          className="costumer-area__banner"
+          src="/images/banners/banner_customerarea.png"
+          className="customer-area__banner"
           alt="Banner Promoções"
         />
 
-        <div className="costumer-are__box-title">
+        <div className="customer-are__box-title">
           <img
             src="/images/icons/icon_euro.png"
-            className="costumer-area__box-title__image"
+            className="customer-area__box-title__image"
             alt="Icone Euro"
           />
           Seus cupons de desconto do mês:
         </div>
 
-        <div className="costumer-area__cupons-image">
-          <div className="costumer-area__cupon-container">
+        <div className="customer-area__cupons-image">
+          <div className="customer-area__cupon-container">
             <img
               src="/images/banners/desc_geleias.png"
-              className="costumer-area__image-desc"
+              className="customer-area__image-desc"
               alt="Desconto de geléias"
             />
           </div>
-          <div className="costumer-area__cupon-container">
+          <div className="customer-area__cupon-container">
             <img
               src="/images/banners/desc_queijos.png"
-              className="costumer-area__image-desc"
+              className="customer-area__image-desc"
               alt="Desconto de quijos"
             />
           </div>
-          <div className="costumer-area__cupon-container">
+          <div className="customer-area__cupon-container">
             <img
               src="/images/banners/desc_pizzas.png"
-              className="costumer-area__image-desc"
+              className="customer-area__image-desc"
               alt="Desconto de pizzas"
             />
           </div>
         </div>
       </div>
+      <Main />
     </>
   );
 }

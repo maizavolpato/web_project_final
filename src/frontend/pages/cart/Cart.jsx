@@ -30,10 +30,10 @@ export default function Cart() {
           />
           <nav className="dashboard__nav">
             <div className="dashboard__nav-links">
-              <Link to="customerarea/shopping" className="dashboard__nav-link">
+              <Link to="/customerarea/shopping" className="dashboard__nav-link">
                 Compras efetuadas
               </Link>
-              <Link to="customerarea/return" className="dashboard__nav-link">
+              <Link to="/customerarea/return" className="dashboard__nav-link">
                 Devoluções
               </Link>
             </div>

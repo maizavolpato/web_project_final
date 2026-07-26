@@ -1,6 +1,6 @@
 export default function Product(props) {
   const { name, price, image } = props.products;
-  const { onProductLike, isLiked, onImageClick } = props;
+  const { onProductLike, isLiked, onImageClick, onBuyProduct } = props;
 
   const productLikeButtonClassName = `product__like-button ${
     isLiked ? "product__like-button-active" : ""
@@ -8,6 +8,10 @@ export default function Product(props) {
 
   function handleLikeClick() {
     onProductLike(props.products);
+  }
+
+  function handleBuyProduct() {
+    onBuyProduct(props.products);
   }
 
   return (
@@ -23,7 +27,14 @@ export default function Product(props) {
       <div className="product-item__body">
         <p className="product-item__title">{name}</p>
         <p className="product-item__price">{price} €</p>
-        <button className="product-item__button">Comprar</button>
+        <button
+          aria-label="Comprar"
+          type="button"
+          className="product-item__button"
+          onClick={handleBuyProduct}
+        >
+          Comprar
+        </button>
       </div>
       <button
         aria-label="Like card"

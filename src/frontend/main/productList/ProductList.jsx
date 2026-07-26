@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase.js";
 import Product from "../../../frontend/main/product/Product.jsx";
-import ImagePopup from "../../../frontend/main/imagePopup/imagePopup.jsx";
+import ImagePopup from "../imagePopup/ImagePopup.jsx";
 
 export default function ProductList({
   selectedCategory,
   favorites,
   onProductLike,
+  onBuyProduct,
 }) {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -52,6 +53,7 @@ export default function ProductList({
             isLiked={favorites.some((favorite) => favorite.id === prod.id)}
             onProductLike={onProductLike}
             onImageClick={handleImageClick}
+            onBuyProduct={onBuyProduct}
           />
         ))}
 
