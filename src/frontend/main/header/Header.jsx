@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import FavoritesModal from "../favoritesModal/FavoritesModal.jsx";
 import OpenWeather from "../weather/Weather.jsx";
 
 export default function Header() {
   const location = useLocation();
   const [isPromoOpen, setIsPromoOpen] = useState(false);
-  const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
+
+  const user = localStorage.getItem("user");
 
   return (
     <header className="header">
@@ -70,12 +70,9 @@ export default function Header() {
             </Link>
           </div>
 
-          <a
+          <Link
             className="header__container-user_favorites"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsFavoritesOpen(true);
-            }}
+            to={user ? "customerarea/favorites" : "/login"}
           >
             <img
               src="images/icons/like_button.png"
@@ -83,8 +80,11 @@ export default function Header() {
               alt="Coração Favoritos"
             />
             <div className="header__container-user_text">Favoritos</div>
-          </a>
-          <Link to="/cart" className="header__container-user_cart">
+          </Link>
+          <Link
+            to={user ? "customerarea/cart" : "/login"}
+            className="header__container-user_cart"
+          >
             <img
               src="images/icons/cart_icon.png"
               alt="Cart Ícone"
@@ -140,10 +140,6 @@ export default function Header() {
           </div>
         </div>
       )}
-      <FavoritesModal
-        isOpen={isFavoritesOpen}
-        onClose={() => setIsFavoritesOpen(false)}
-      />
     </header>
   );
 }

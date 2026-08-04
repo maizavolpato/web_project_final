@@ -9,6 +9,7 @@ import Register from "./pages/register/Register.jsx";
 import CustomerArea from "./pages/customerArea/CustomerArea.jsx";
 import PrivateRoute from "./pages/PrivateRoute.jsx";
 import Cart from "./pages/cart/Cart.jsx";
+import Favorites from "./pages/favorites/Favorites.jsx";
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
     "/customerarea/shopping",
     "/customerarea/return",
     "/customerarea/cart",
+    "/customerarea/favorites",
   ];
 
   const hideHeader = hiddenRoutes.includes(location.pathname);
@@ -63,6 +65,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Cart />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/customerarea/favorites"
+            element={
+              <PrivateRoute>
+                <Favorites />
               </PrivateRoute>
             }
           />

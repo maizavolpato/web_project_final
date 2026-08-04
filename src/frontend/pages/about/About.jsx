@@ -73,7 +73,7 @@ export default function About() {
             />
             <div className="header__container-user_text">Favoritos</div>
           </a>
-          <Link to="/cart" className="header__container-user_cart">
+          <Link to="" className="header__container-user_cart">
             <img
               src="/images/icons/cart_icon.png"
               alt="Cart Ícone"

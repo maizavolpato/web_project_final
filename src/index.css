@@ -11,3 +11,5 @@
 @import url("../src/frontend//pages/register/register.css");
 @import url("../src/frontend//pages/customerArea/customerarea.css");
 @import url("../src/frontend//pages/cart/cart.css");
+@import url("./frontend/pages/errors.css");
+@import url("./frontend/pages/favorites/favorites.css");
