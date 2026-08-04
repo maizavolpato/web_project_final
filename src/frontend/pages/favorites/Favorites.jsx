@@ -37,7 +37,7 @@ export default function Favorites() {
               </Link>
             </div>
             <div className="dashboard__nav-links-user">
-              <Link to="/costumerarea" className="dashboard__nav-link">
+              <Link to="/customerarea" className="dashboard__nav-link">
                 <img
                   src="/images/icons/user_icon.png"
                   className="dashboard__image-user"
@@ -45,7 +45,7 @@ export default function Favorites() {
                 />
                 Minha página
               </Link>
-              <Link to="/costumerarea/cart" className="dashboard__nav-link">
+              <Link to="/customerarea/cart" className="dashboard__nav-link">
                 <img
                   src="/images/icons/cart_icon.png"
                   className="dashboard__image-cart"
