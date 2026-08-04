@@ -89,7 +89,7 @@
 }
 
 .favorites__remove-button {
-  background: transparent url(/images/delete_button.png) center no-repeat;
+  background: transparent url(/images/icons/delete_button.png) center no-repeat;
   background-size: 18px 19px;
   width: 18px;
   height: 18px;
