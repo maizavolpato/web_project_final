@@ -2,6 +2,7 @@ import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
+import authMiddleware from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -88,6 +89,28 @@ router.post("/login", async (req, res) => {
     });
   } catch (error) {
     console.error("Erro ao fazer login:", error);
+
+    return res.status(500).json({
+      message: "Erro interno do servidor.",
+    });
+  }
+});
+
+router.get("/me", authMiddleware, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.userId).select("-password");
+
+    if (!user) {
+      return res.status(404).json({
+        message: "Usuário não encontrado.",
+      });
+    }
+
+    return res.status(200).json({
+      user,
+    });
+  } catch (error) {
+    console.error("Erro ao buscar usuário:", error);
 
     return res.status(500).json({
       message: "Erro interno do servidor.",
