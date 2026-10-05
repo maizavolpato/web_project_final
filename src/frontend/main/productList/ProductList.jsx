@@ -10,6 +10,8 @@ export default function ProductList({
 }) {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -24,11 +26,22 @@ export default function ProductList({
         setProducts(data);
       } catch (error) {
         console.error("Erro ao carregar produtos:", error);
+        setError(true);
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchProducts();
   }, []);
+
+  if (loading) {
+    return <p>Carregando Produtos...</p>;
+  }
+
+  if (error) {
+    return <p> Não foi possiível carregar os produtos.</p>;
+  }
 
   function getFilteredProducts() {
     if (selectedCategory === "all") {
@@ -48,16 +61,20 @@ export default function ProductList({
   return (
     <div className="products">
       <div className="products__container">
-        {getFilteredProducts().map((prod) => (
-          <Product
-            key={prod.id}
-            products={prod}
-            isLiked={favorites.some((favorite) => favorite.id === prod.id)}
-            onProductLike={onProductLike}
-            onImageClick={handleImageClick}
-            onBuyProduct={onBuyProduct}
-          />
-        ))}
+        {getFilteredProducts().lenght === 0 ? (
+          <p>Nenhum produto encontrado.</p>
+        ) : (
+          getFilteredProducts().map((prod) => (
+            <Product
+              key={prod.id}
+              products={prod}
+              isLiked={favorites.some((favorite) => favorite.id === prod.id)}
+              onProductLike={onProductLike}
+              onImageClick={handleImageClick}
+              onBuyProduct={onBuyProduct}
+            />
+          ))
+        )}
 
         {selectedProduct && (
           <ImagePopup product={selectedProduct} onClose={closePopup} />
