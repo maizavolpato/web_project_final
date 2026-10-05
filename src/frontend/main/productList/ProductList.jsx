@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../../firebase.js";
 import Product from "../../../frontend/main/product/Product.jsx";
 import ImagePopup from "../imagePopup/ImagePopup.jsx";
 
@@ -15,14 +13,18 @@ export default function ProductList({
 
   useEffect(() => {
     async function fetchProducts() {
-      const snapshot = await getDocs(collection(db, "products"));
+      try {
+        const response = await fetch("http://localhost:3000/api/products");
 
-      const data = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+        if (!response.ok) {
+          throw new Error("Erro ao buscar produtos");
+        }
 
-      setProducts(data);
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Erro ao carregar produtos:", error);
+      }
     }
 
     fetchProducts();
