@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import LogoutButton from "../LogoutButton";
 
 export default function Cart() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -62,6 +63,7 @@ export default function Cart() {
                 placeholder="Pesquisar produtos"
                 className="dashboard__input"
               />
+              <LogoutButton />
             </div>
           </nav>
         </div>

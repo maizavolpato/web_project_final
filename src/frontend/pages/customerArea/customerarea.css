@@ -68,22 +68,6 @@
   height: 28px;
 }
 
-.dashboard__logout {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: #b83232;
-  color: white;
-  font-size: 14px;
-  font-weight: bolder;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.dashboard__logout:hover {
-  background-color: #922626;
-}
-
 .customer-area {
   width: 100%;
   max-width: 100%;

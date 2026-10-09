@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Main from "../../main/main/Main";
+import LogoutButton from "../LogoutButton";
 
 export default function CustomerArea() {
   const navigate = useNavigate();
@@ -63,13 +64,6 @@ export default function CustomerArea() {
     return <p>{error}</p>;
   }
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-
-    navigate("/login");
-  };
-
   return (
     <>
       <div className="dashboard">
@@ -115,13 +109,7 @@ export default function CustomerArea() {
             placeholder="Pesquisar produtos"
             className="dashboard__input"
           />
-          <button
-            type="button"
-            className="dashboard__logout"
-            onClick={handleLogout}
-          >
-            Sair
-          </button>
+          <LogoutButton />
         </div>
       </div>
       <div className="customer-area">

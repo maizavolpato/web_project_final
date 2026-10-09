@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import LogoutButton from "../LogoutButton";
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState([]);
@@ -53,6 +54,12 @@ export default function Favorites() {
                 />
                 Carrinho
               </Link>
+              <input
+                type="text"
+                placeholder="Pesquisar produtos"
+                className="dashboard__input"
+              />
+              <LogoutButton />
             </div>
           </nav>
         </div>

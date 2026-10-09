@@ -36,46 +36,13 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
-          <Route
-            path="/customerarea"
-            element={
-              <PrivateRoute>
-                <CustomerArea />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/customerarea/shopping"
-            element={
-              <PrivateRoute>
-                <NotFound />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/customerarea/return"
-            element={
-              <PrivateRoute>
-                <NotFound />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/customerarea/cart"
-            element={
-              <PrivateRoute>
-                <Cart />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/customerarea/favorites"
-            element={
-              <PrivateRoute>
-                <Favorites />
-              </PrivateRoute>
-            }
-          />
+          <Route element={<PrivateRoute />}>
+            <Route path="/customerarea" element={<CustomerArea />} />
+            <Route path="/customerarea/shopping" element={<NotFound />} />
+            <Route path="/customerarea/return" element={<NotFound />} />
+            <Route path="/customerarea/cart" element={<Cart />} />
+            <Route path="/customerarea/favorites" element={<Favorites />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

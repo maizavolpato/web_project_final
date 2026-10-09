@@ -10,9 +10,9 @@ router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    if (!name || !email || !password) {
+    if (!email || !password) {
       return res.status(400).json({
-        message: "Nome, email e senha são obrigatórios.",
+        message: "Email e senha são obrigatórios.",
       });
     }
 
@@ -44,7 +44,7 @@ router.post("/register", async (req, res) => {
     console.error("Erro ao cadastrar usuário:", error);
 
     return res.status(500).json({
-      message: "erro interno do servidor.",
+      message: "Erro interno do servidor.",
     });
   }
 });
@@ -67,7 +67,6 @@ router.post("/login", async (req, res) => {
       });
     }
     const passwordMatch = await bcrypt.compare(password, user.password);
-
     if (!passwordMatch) {
       return res.status(401).json({
         message: "Email ou senha inválidos.",

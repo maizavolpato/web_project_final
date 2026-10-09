@@ -142,21 +142,18 @@ export default function Login() {
               </li>
             </ul>
           </nav>
-          <a
+          <Link
             className="header__container-user_favorites"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsFavoritesOpen(true);
-            }}
+            to="/customerarea/favorites"
           >
             <img
-              src="/images/icons/favorites.png"
+              src="images/icons/like_button.png"
               className="header__container-user_icone-favorites"
               alt="Coração Favoritos"
             />
             <div className="header__container-user_text">Favoritos</div>
-          </a>
-          <Link to="customerarea/cart" className="header__container-user_cart">
+          </Link>
+          <Link to="/customerarea/cart" className="header__container-user_cart">
             <img
               src="/images/icons/cart_icon.png"
               alt="Cart Ícone"
