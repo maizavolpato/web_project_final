@@ -1,7 +1,75 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Main from "../../main/main/Main";
 
-export default function CostumerArea() {
+export default function CustomerArea() {
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        navigate("/login");
+        return;
+      }
+
+      try {
+        const response = await fetch("http://localhost:3000/api/auth/me", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          if (response.status === 401) {
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            navigate("/login");
+            return;
+          }
+
+          throw new Error(
+            result.message || "Erro ao carregar os dados do usuário.",
+          );
+        }
+
+        setUser(result.user);
+
+        localStorage.setItem("user", JSON.stringify(result.user));
+      } catch (error) {
+        console.error("Erro ao buscar usuário:", error);
+        setError("Não foi possível carregar seus dados.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, [navigate]);
+
+  if (loading) {
+    return <p>Carregando sua área...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+
+    navigate("/login");
+  };
+
   return (
     <>
       <div className="dashboard">
@@ -47,9 +115,16 @@ export default function CostumerArea() {
             placeholder="Pesquisar produtos"
             className="dashboard__input"
           />
+          <button
+            type="button"
+            className="dashboard__logout"
+            onClick={handleLogout}
+          >
+            Sair
+          </button>
         </div>
       </div>
-      <div className="costumer-area">
+      <div className="customer-area">
         <img
           src="/images/banners/banner_customerarea.png"
           className="customer-area__banner"

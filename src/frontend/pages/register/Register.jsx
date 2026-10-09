@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function Register({ handleRegister }) {
+export default function Register() {
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -17,16 +17,34 @@ export default function Register({ handleRegister }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("dados capturados:", data);
-    handleRegister(data.email, data.password)
-      .then(() => {
-        navigate("/signin");
-      })
-      .catch((err) => {
-        console.log("Erro no registro:", err);
+
+    try {
+      const response = await fetch("http://localhost:3000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
       });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Erro ao cadastrar usuário.");
+      }
+
+      console.log("Cadastro realizado com sucesso:", result);
+
+      navigate("/login");
+    } catch (error) {
+      console.error("Erro no registro:", error);
+    }
   };
 
   return (

@@ -55,16 +55,32 @@ export default function Login() {
     }));
   };
 
-  const handleLogin = () => {
-    localStorage.setItem(
-      "user",
-      JSON.stringify({
-        name: "Teste",
-        email: data.email,
-      }),
-    );
+  const handleLogin = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
+      });
 
-    navigate("/customerarea");
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Erro ao fazer login");
+      }
+
+      localStorage.setItem("token", result.token);
+      localStorage.setItem("user", JSON.stringify(result.user));
+
+      navigate("/customerarea");
+    } catch (error) {
+      console.error("erro ao fazer login:", error);
+    }
   };
 
   const handleSubmit = (e) => {

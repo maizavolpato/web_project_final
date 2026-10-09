@@ -40,7 +40,7 @@ export default function ProductList({
   }
 
   if (error) {
-    return <p> Não foi possiível carregar os produtos.</p>;
+    return <p> Não foi possível carregar os produtos.</p>;
   }
 
   function getFilteredProducts() {

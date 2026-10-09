@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "../frontend/main/header/Header.jsx";
-import Home from "../frontend/main/home/home.jsx";
+import Main from "../frontend/main/main/Main.jsx";
 import Footer from "../frontend/main/footer/Footer.jsx";
 import About from "../frontend/pages/about/About.jsx";
 import NotFound from "../frontend/pages/notFound/NotFound.jsx";
@@ -32,7 +32,7 @@ function App() {
       <div className="page__container">
         {!hideHeader && <Header />}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
